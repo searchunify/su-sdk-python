@@ -4,7 +4,7 @@ import setuptools
 
 setuptools.setup(
     include_package_data=True,
-    name="su-sdk",
+    name="searchunify",
     version='1.0.0',
     description='The SearchUnify SDK enables developers to easily work with the SearchUnify platform and build scalable solutions with search, analytics, crawlers and more.',
     author='SearchUnify',

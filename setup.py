@@ -25,10 +25,10 @@ setup(
         'Source': 'https://github.com/searchunify/su-sdk-python',
     },
     classifiers=[
-        'Development Status :: Production/Stable',
+        'Development Status :: 4 - Beta',
         'Intended Audience :: Developers',
         'Natural Language :: English',
-        'License :: MIT',
+        'License :: OSI Approved :: MIT License',
         'Programming Language :: Python',
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.7',

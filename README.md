@@ -20,22 +20,27 @@ pip install su-sdk
 ## Execution
 Initiate SearchUnify Python SDK on Server. Using the SDK, you can route search requests. To start using, initialize the SDK with your URL and API key.
 ```python
-from searchunify import startClient, refreshToken, getTilesData
-username = "**************"
-password = "**************"
-clientId = "**************"
-secrets =  "**************"
-url= "yourcompany.searchunify.com"
-result = startClient(username=username, password=password,clientId=clientId, secrets=secrets, instance=url)
+from searchunify import Searchunify
 
-startDate       =   "startdate"
-endDate         =   "endDate"
-searchClientId  =   "searchClientId"
-data          =   getTilesData(startDate=startDate, endDate=endDate, searchClientId=searchClientId)
-print("The tile data ", data)
+username = "changeme"
+password = "changeme"
+clientId = "changeme"
+secrets = "changeme"
+instance = "changeme"
+
+client =  Searchunify(instance=instance, username=username, password=password, client_id=clientId, client_secret=secrets)
+
+startDate       =   "changeme"
+endDate         =   "changeme"
+searchClientId  =   "changeme"
+data          =   client.get_tiles_data(startDate=startDate, endDate=endDate, searchClientId=searchClientId)
+print("The tile data response: ", data)
 ```
 The access token will expire after 4 hours and you need to refresh that.
 
+```python
+result = client.refresh_token()
+```
 ## Documentation
 Please refer to the SearchUnify developer guide to use the SDK. https://docs.searchunify.com/Content/Developer-Guides/SDKs-Python.htm
 

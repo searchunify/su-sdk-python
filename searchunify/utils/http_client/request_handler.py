@@ -4,12 +4,12 @@ import json
 
 
 class RequestManager:
-    def httpRequest(method, url, **args):
+    def http_request(method, url, **args):
         try:
             result = requests.request(method, url, **args)
             response = json.loads(result.text)
             return response
         except HTTPError as httpError:
-            return httpError
+            raise Exception(httpError)
         except Exception as error:
-            return error
+            raise Exception(error)

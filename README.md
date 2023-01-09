@@ -15,7 +15,7 @@ Sign up for SearchUnify, before you begin, you need a SearchUnify account. Pleas
 SDK requires Python 3+ and pip to run.
 The recommended way to use the SearchUnify SDK for Python in your project is to consume it from PyPI.
 ```python
-pip install su-sdk
+pip3 install searchunify
 ```
 ## Execution
 Initiate SearchUnify Python SDK on Server. Using the SDK, you can route search requests. To start using, initialize the SDK with your URL and API key.

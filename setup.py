@@ -10,7 +10,7 @@ requires = [
 setup(
     include_package_data=True,
     name="searchunify",
-    version='1.0.5',
+    version='1.0.7',
     description='The SearchUnify SDK enables developers to easily work with the SearchUnify platform and build scalable solutions with search, analytics, crawlers and more.',
     long_description_content_type='text/markdown',
     long_description=open('README.md').read(),

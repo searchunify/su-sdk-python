@@ -44,8 +44,10 @@ class Content:
         replacedObject = {"<contentSourceId>": str(
             payload['contentSourceId']), "<objectId>": str(payload['objectId'])}
         url = replace_all(url, replacedObject)
-        payload["from"] = payload["offset"]
-        del payload["contentSourceId"], payload["objectId"], payload["offset"]
+        if payload.get("offset"):
+            payload["from"] = payload.get("offset")
+            del payload["offset"]
+        del payload["contentSourceId"], payload["objectId"]
         response = RequestManager.http_request(
             "GET", url, headers=get_auth_header(), params=payload)
         return response

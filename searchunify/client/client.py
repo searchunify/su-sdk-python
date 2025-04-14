@@ -16,7 +16,7 @@ class Client:
 
         elif(client.get('api_token')):
             OauthValidator.api_key_token(**client)
-            AuthVariables.AUTH_TYPE = client.get('api_token')
+            AuthVariables.API_TOKEN = client.get('api_token')
             AuthVariables.AUTH_TYPE = CONSTANTS.API_KEY_DEL
 
         elif(client.get('jwt_token')):

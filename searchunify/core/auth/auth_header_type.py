@@ -12,7 +12,7 @@ def get_auth_header():
     if(AUTH_VARS.AUTH_TYPE == CONSTANTS.OAUTH2_DEL):
         authHeader['Authorization'] = 'Bearer ' + AUTH_VARS.ACCESS_TOKEN
     elif(AUTH_VARS.AUTH_TYPE == CONSTANTS.API_KEY_DEL):
-        authHeader['Authorization'] = 'ApiKey ' + AUTH_VARS.ACCESS_TOKEN
+        authHeader['x-api-token'] = AUTH_VARS.API_TOKEN
     elif(AUTH_VARS.AUTH_TYPE == CONSTANTS.JWT_KEY_DEL):
         authHeader['Authorization'] = 'Jwt ' + AUTH_VARS.JWT_TOKEN
     else:
